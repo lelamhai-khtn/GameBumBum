@@ -16,10 +16,8 @@ public class Player : MonoBehaviour {
         if(Physics.Raycast(ray, out hit))
         {
             target = hit.point;
-
             if(hit.transform.tag.Equals("Enemy"))
             {
-                Debug.Log(11111);
                 Destroy(hit.transform.gameObject);
             }
         }
