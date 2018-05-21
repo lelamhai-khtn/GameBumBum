@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
-    public GameObject SpawnPoint;
-    public GameObject Enemy;
+    public GameObject[] SpawnPoint;
+    public GameObject[] Enemy;
 
     public float MinSpawnTime = 0.2f;
     public float MaxSpawnTime = 1;
     private float LastSpawnTime = 0;
     private float SpawnTime = 0;
 
-    private Vector3 PositionFood = new Vector3();
 	// Use this for initialization
 	void Start () {
         UpdateSpawnTime();
@@ -33,7 +32,11 @@ public class EnemyController : MonoBehaviour {
 
     void Spawn()
     {
-        Instantiate(Enemy, SpawnPoint.transform.position, Quaternion.identity);
+		int index = Random.Range(0,2);
+		int indexModel = Random.Range(0, 2);
+		Instantiate(Enemy[indexModel], SpawnPoint[index].transform.position, Quaternion.identity);
         UpdateSpawnTime();
     }
+
+
 }

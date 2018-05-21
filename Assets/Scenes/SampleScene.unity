@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -361,6 +361,34 @@ GameObject:
   m_PrefabParentObject: {fileID: 1022289440722746, guid: 76851018fe5793649860d5b691dd8427,
     type: 2}
   m_PrefabInternal: {fileID: 139341390}
+--- !u!1 &1155074921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1155074922}
+  m_Layer: 0
+  m_Name: Spawn (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1155074922
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1155074921}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -21.2, y: 0, z: -15.18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1686974221}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1279942684
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +411,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1279942684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.45, y: 2.1, z: 0}
+  m_LocalPosition: {x: -21.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1686974221}
@@ -421,6 +449,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1279942685}
+  - {fileID: 1155074922}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -435,8 +464,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4d1ad0b6d5147808e65995d72b058d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPoint: {fileID: 1279942684}
-  Enemy: {fileID: 1146432836309734, guid: def9ad698277844adbfb79a3b4eec1a6, type: 2}
+  SpawnPoint:
+  - {fileID: 1279942684}
+  - {fileID: 1155074921}
+  Enemy:
+  - {fileID: 1852063393032368, guid: 60ba731705b3e6e449a819bec489a4ff, type: 2}
+  - {fileID: 1312265580710266, guid: 5fc884be20da74cbdbaa40671ef516bf, type: 2}
   MinSpawnTime: 0.2
   MaxSpawnTime: 1
 --- !u!1 &1702524929

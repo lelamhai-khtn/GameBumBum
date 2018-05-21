@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
     GameObject Food;
-    public float Speed = 0.5f;
+    public float Speed = 0.1f;
+	public int EnemyHealth = 3;
 	// Use this for initialization
 	void Start () {
         Food = GameObject.FindGameObjectWithTag("Food");
@@ -16,7 +17,21 @@ public class Enemy : MonoBehaviour {
         MoveEnemy();
     }
 
-    private void MoveEnemy()
+    public void GetHit(int damge)
+	{
+		EnemyHealth -= damge; 
+		if(EnemyHealth <= 0)
+		{
+			Dead();
+		}
+	}
+
+	private void Dead()
+	{
+		Destroy(this.gameObject);
+	}
+
+	private void MoveEnemy()
     {
         if (Food != null)
         {
