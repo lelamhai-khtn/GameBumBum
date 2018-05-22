@@ -26,8 +26,6 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		print("time: " + Time.time);
-		print("deltaTime: " + Time.deltaTime);
 		RoteGun();
 		if(Input.GetMouseButton(0))
 		{

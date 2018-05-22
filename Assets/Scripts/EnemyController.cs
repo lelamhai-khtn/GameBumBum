@@ -26,7 +26,7 @@ public class EnemyController : MonoBehaviour {
 	void Update () {
 		if(Time.time >= LastSpawnTime + SpawnTime)
         {
-            Spawn();
+            //Spawn();
         }
 	}
 
