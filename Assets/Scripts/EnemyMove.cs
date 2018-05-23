@@ -9,7 +9,7 @@ public class EnemyMove : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Food = GameObject.FindGameObjectWithTag("Food");
-		print(Food.gameObject.transform.GetChild(0).position);
+		//print(Food.gameObject.transform.GetChild(0).position);
 		for (int i = 0; i < 4; i++)
 		{
 			ListPos.Add(new Vector3(Random.Range(1,5), 0 ,Random.Range(1, 5)));
